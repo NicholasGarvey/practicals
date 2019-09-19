@@ -3,20 +3,25 @@
 
 from prac_06.car import Car
 
+MENU = "d) drive\nr) refuel\nq) quit"
+
 
 def main():
-    """Demo test code to show how to use car class."""
-    my_car = Car(180)
-    my_car.drive(30)
-    print("fuel =", my_car.fuel)
-    print("odo =", my_car.odometer)
-    print(my_car)
-
-    limo = Car(100)
-
-
-    print("Car {}, {}".format(my_car.fuel, my_car.odometer))
-    print("Car {self.fuel}, {self.odometer}".format(self=my_car))
+    name = input("please enter a car name")
+    limo = Car(name, 100)
+    print(MENU)
+    choice = input("Please chose an option: ").lower()
+    while choice != "q":
+        if choice == "r":
+            fuel_to_add = int(input("how much fuel do you want to add?"))
+            limo.add_fuel(fuel_to_add)
+            print("added {} units of fuel".format(fuel_to_add))
+            total_fuel = (100 + fuel_to_add)
+            print(total_fuel)
+        elif choice == "d":
+            drive_distance = int(input("How many km do you wish to drive"))
+            distance_driven = limo.drive(drive_distance)
+            print("the Limo drove {}km".format(distance_driven))
 
 
 main()
