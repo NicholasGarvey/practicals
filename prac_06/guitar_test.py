@@ -13,7 +13,7 @@ def run_tests():
                                                       guitar.get_age()))
     print("{} get_age() - Expected {}. Got {}".format(other.name, 5,
                                                       other.get_age()))
-    print()
+    print('\n')
     print("{} is_vintage() - Expected {}. Got {}".format(guitar.name,
                                                          True,
                                                          guitar.is_vintage()))
