@@ -14,12 +14,12 @@ class ProgrammingLanguage:
             self.name, self.typing, self.reflection, self.year)
 
     def is_dynamic(self):
-        # Determine's if the language is dynamically typed
+        """Determines if the language is dynamically typed"""
         return self.typing == "Dynamic"
 
 
 def run_tests():
-    # Run's a simple test on ProgrammingLanguage class
+    """ Runs a simple test on ProgrammingLanguage class"""
     ruby = ProgrammingLanguage("Ruby", "Dynamic", True, 1995)
     python = ProgrammingLanguage("Python", "Dynamic", True, 1991)
     visual_basic = ProgrammingLanguage("Visual Basic", "Static", False, 1991)
