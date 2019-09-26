@@ -4,8 +4,7 @@ from prac_06.guitar import Guitar
 def main():
     guitars = []
 
-    # have user input name of guitar
-    #
+    # have user input name of guitar as well as the year and cost
     print("My guitars!")
     name = input("Name: ")
     while name != "":
@@ -18,7 +17,7 @@ def main():
 
     guitars.append(Guitar("Gibson L-5 CES", 1922, 16035.40))
     guitars.append(Guitar("Line 6 JTV-59", 2010, 1512.9))
-
+    # sort the guitars into vintage and non vintage
     if guitars:
         guitars.sort()
         print("These are my guitars:")
