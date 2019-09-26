@@ -4,6 +4,8 @@ from prac_06.guitar import Guitar
 def main():
     guitars = []
 
+    # have user input name of guitar
+    #
     print("My guitars!")
     name = input("Name: ")
     while name != "":
